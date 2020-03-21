@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_mastres_Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>.: AREA ADMINISTRATIVA - JML Solu&ccedil;&otilde;es :.</title>
+    <link href="../css/admin.css" rel="stylesheet" type="text/css" />
+    <script src="../admin/js/jquery-1.3.1.min.js" type="text/javascript"></script>
+   <script src="../admin/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#accordion a.item').click(function () {
+
+                //slideup or hide all the Submenu
+                $('#accordion li').children('ul').slideUp('fast');
+
+                //remove all the "Over" class, so that the arrow reset to default
+                $('#accordion a.item').each(function () {
+                    if ($(this).attr('rel') != '') {
+                        $(this).removeClass($(this).attr('rel') + 'Over');
+                    }
+                });
+
+                //show the selected submenu
+                $(this).siblings('ul').slideDown('fast');
+
+                //add "Over" class, so that the arrow pointing down
+                $(this).addClass($(this).attr('rel') + 'Over');
+
+                return false;
+
+            });
+
+        });
+	
+	</script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+        <!--DIV DO TOPO-->
+        <div id="topo">
+    
+        <asp:Image ID="imgTopo" runat="server" ImageUrl="~/admin/img/topo.png" />
+    
+    </div>
+
+        <!--DIV DO MENU-->
+        <ul id="accordion">
+            <asp:ImageButton ID="btnHome" runat="server" Height="107px" 
+                ImageUrl="~/admin/img/logo_jml.png" PostBackUrl="~/admin/wfrmAdminHome.aspx" />
+            <li>
+                <a href="#" class="item popular" rel="popular">    CADASTROS</a>
+                <ul>
+                    <li>
+                        <img alt="" src="../admin/img/usuario.png" style="height: 30px" /><br />
+                   </li>
+                    <li>   
+                        <asp:LinkButton ID="btnCadUsuario" runat="server" PostBackUrl="~/admin/wfrmCadUsuario.aspx">- Cadastrar Usuários</asp:LinkButton>
+                    </li>
+                    <li>
+                        <img alt="" src="../admin/img/service.png" style="height: 30px" />
+                    </li>
+                    <li>    
+                        <asp:LinkButton ID="btnCadServico" runat="server">- Cadastro de serviços</asp:LinkButton>
+                    </li>
+                    <li>
+                        <img alt="" src="../admin/img/cliente.png" style="height: 30px" />
+                    </li>
+                    <li>    
+                        <asp:LinkButton ID="btnCadCliente" runat="server">Cadastro de clientes</asp:LinkButton>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="item category" rel="category">    RELATÓRIOS</a>
+                <ul>
+                    <li>
+                        <img alt="" src="../admin/img/usuario.png" style="height: 30px" />
+                     </li>
+                    <li>   
+                        <asp:LinkButton ID="btnUsuarioCad" runat="server">- Usuários Cadastrados</asp:LinkButton>
+                    </li>
+                    <li>
+                        <img alt="" src="../admin/img/service.png" style="height: 30px" />
+                     </li>
+                    <li>   
+                        <asp:LinkButton ID="btnServicoCad" runat="server">- Serviços Cadastrados</asp:LinkButton>
+                    </li>
+                    <li>
+                        <img alt="" src="../admin/img/cliente.png" style="height: 30px" />
+                    </li>
+                    <li>    
+                        <asp:LinkButton ID="btnClienteCad" runat="server">- Clientes Cadastrados</asp:LinkButton>
+                   </li>
+                    <li>
+                        <img alt="" src="../admin/img/app.png" style="height: 30px" />
+                    </li>
+                    <li>    
+                        <asp:LinkButton ID="btnSlaGerado" runat="server">- SLAs Gerados</asp:LinkButton>
+                    </li>
+                </ul>
+            </li>
+            
+            <ul>
+                    <li>
+                        <img alt="" src="../admin/img/visualizar.png" style="height: 30px" />
+                    </li>
+                    <li>    
+                        <asp:LinkButton ID="btnVisualizaProj" runat="server">-  Projetos</asp:LinkButton>
+                    </li>
+                </ul>
+            <li>
+                <a href="#" class="item comment" rel="comment">    CONTROLE DE PROJETOS</a>
+                <ul>
+                <li>
+                        <img alt="" src="../admin/img/add.png" style="height: 30px" />
+                     </li>
+                    <li>   
+                        <asp:LinkButton ID="LinkButton1" runat="server">- Cadastrar Novo Projeto</asp:LinkButton>
+                    </li>
+                    <li>
+                        <img alt="" src="../admin/img/add.png" style="height: 30px" />
+                     </li>
+                    <li>   
+                        <asp:LinkButton ID="btnGeraSla" runat="server" PostBackUrl="~/admin/wfrmNovoSla.aspx">- Lançar  novo SLA</asp:LinkButton>
+                    </li>
+                    <li>
+                        <img alt="" src="../admin/img/app.png" style="height: 30px" />
+                     </li>
+                    <li>   
+                        <asp:LinkButton ID="btnAprovaSla" runat="server">- Aprovar SLAs </asp:LinkButton>
+                    </li>
+                    <li>
+                       <img alt="" src="../admin/img/deleted.png" style="height: 30px" /> 
+                    </li>
+                    <li>   
+                       <asp:LinkButton ID="btnReprovaSla" runat="server">Reprovar SLAs </asp:LinkButton>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="item comment" rel="comment">SITE</a>
+                <ul>
+                    <li>
+                        <img alt="" src="../admin/img/adicionar.png" style="height: 30px" />
+                     </li>
+                    <li>   
+                        <asp:LinkButton ID="btnCadastroBanner" runat="server">Cadastro de Banners</asp:LinkButton>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+
+        </ul>
+
+        <!--DIV DO CONTEUDO-->
+        <div id="conteudo">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    </form>
+</body>
+</html>

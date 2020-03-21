@@ -1,0 +1,5 @@
+C:\Users\marcos\SkyDrive\Documentos\JML-Soluções\Projetos\JML_SOLUCOES\JML_JmlSolucoes\JML_jmlSolucoes\bin\x64\Debug\JML_jmlSolucoes.pdb
+C:\Users\marcos\SkyDrive\Documentos\JML-Soluções\Projetos\JML_SOLUCOES\JML_JmlSolucoes\JML_jmlSolucoes\obj\x64\Debug\JML_jmlSolucoes.dll
+C:\Users\marcos\SkyDrive\Documentos\JML-Soluções\Projetos\JML_SOLUCOES\JML_JmlSolucoes\JML_jmlSolucoes\obj\x64\Debug\JML_jmlSolucoes.pdb
+C:\Users\marcos\SkyDrive\Documentos\JML-Soluções\Projetos\JML_SOLUCOES\JML_jmlSolucoes\JML_jmlSolucoes\bin\x64\Debug\JML_jmlSolucoes.dll
+C:\Users\marcos\SkyDrive\Documentos\JML-Soluções\Projetos\JML_SOLUCOES\JML_jmlSolucoes\JML_jmlSolucoes\obj\x64\Debug\JML_jmlSolucoes.csprojResolveAssemblyReference.cache

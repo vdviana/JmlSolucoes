@@ -1,0 +1,138 @@
+﻿body {
+    background-color: #f1f1f1;
+    background-image: url(../img/fundo_admin.png);
+    background-repeat: repeat-x;
+}
+
+a:link {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6DB652;
+    text-decoration: underline;
+    font-size:110%;
+}
+
+a:active {
+    color: #6DB652;
+    text-decoration: none;
+}
+
+
+#topo 
+{
+    
+    height: 89px;
+    width: 920px;
+    margin-top: 60px;
+    margin-left:185px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+      
+}
+#conteudo 
+{
+    position:relative;
+    height: 900px;
+    width: 1000px;
+    margin-top: -400px;
+    margin-left: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    
+}
+
+	/* First Level UL List */
+	#accordion {
+		margin:0;
+		padding:0;	
+		list-style:none;
+		height: 400px;
+        width: 232px;
+        margin-top: 80px;
+        margin-left:0px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #E4E4E4;
+	}
+	
+
+
+		#accordion li {
+			width:241px;
+		}
+	
+		#accordion li a {
+			display: block;
+			width: 232px;
+			height: 43px;
+			font-family:Arial;
+			font-size:small;
+			outline:none;
+			
+		}
+		
+		/* Using CSS Sprite for menu item */
+		#accordion li a.popular 
+		{
+		    background-color: #757575;	
+		}
+
+		#accordion li a.popular:hover, .popularOver {
+			background-color: #757575;
+		}
+		
+		#accordion li a.category {
+			background-color: #757575;
+		}
+
+		#accordion li a.category:hover, .categoryOver {
+			background-color: #757575;
+		}
+		
+		#accordion li a.comment {
+			background-color: #757575;
+		}
+
+		#accordion li a.comment:hover, .commentOver {
+			background-color: #757575;	
+		}
+		
+		
+		/* Second Level UL List*/
+		#accordion ul {
+			background-color: #E4E4E4;
+			width:232px;
+			margin:0;
+			padding:0;
+			display:none;	
+			font-size:small;
+		}
+		
+			#accordion ul li {
+				height:30px;
+			}
+			
+			/* styling of submenu item */
+			#accordion ul li a {
+				width:232px;
+				height:25px;
+				margin-left:0px;
+				padding-top:5px;
+				border-bottom: 1px dotted #777;
+				text-indent:0;
+				color: #757575;
+				text-decoration:none;
+			}
+
+			/* remove border bottom of the last item */
+			#accordion ul li a.last {
+				border-bottom: none;
+			}		
